@@ -1,4 +1,4 @@
-# INT-009 — Physics and Locomotion PoC
+# INT-009 - Physics and Locomotion PoC
 
 ## Intent
 
@@ -10,12 +10,12 @@ Prove minimum local physical interaction using cheap representation and a replac
 
 ## Contract focus
 
-The canonical Contract for this Intent should authorise the smallest implementation capable of resolving the uncertainty or producing the stated programme outcome. Domain-specific implementation details belong in the Brief and relevant Production Skills.
+Evaluate provider replaceability and the determinism envelope required by experiments: fixed-step behaviour, deterministic initialisation, replayability, snapshot/restore or equivalent state capture, state comparison/hashing where useful, cross-platform requirements and nondeterministic inputs outside the solver.
 
 ## Evidence target
 
-Movement, collision, forces, falling, stairs and recovery work without gameplay depending directly on one physics provider.
+Movement, collision, forces, falling, stairs and recovery work without gameplay depending directly on one physics provider; the chosen determinism envelope is explicit and tested.
 
 ## Scope rule
 
-Do not introduce adjacent capabilities merely because the long-term architecture may eventually need them.
+Do not implement advanced vehicle, destruction or active-ragdoll systems in this PoC.

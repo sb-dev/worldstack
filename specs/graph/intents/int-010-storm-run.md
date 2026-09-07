@@ -1,8 +1,12 @@
-# INT-010 — Storm Run
+# INT-010 - Storm Run
 
 ## Intent
 
 Build the first research-backed interactive causal experiment: weather→road state→friction→vehicle behaviour.
+
+## Question
+
+Is one road-surface friction coefficient sufficient to produce plausible braking and cornering behaviour across the target speed range, or does the model require additional state or interaction terms?
 
 ## Dependencies
 
@@ -12,12 +16,12 @@ Build the first research-backed interactive causal experiment: weather→road st
 
 ## Contract focus
 
-The canonical Contract for this Intent should authorise the smallest implementation capable of resolving the uncertainty or producing the stated programme outcome. Domain-specific implementation details belong in the Brief and relevant Production Skills.
+Hold route, vehicle setup and input trace constant while comparing dry, light-rain and heavy-rain conditions. Record the trace and pin seed, model revisions and runtime identity so the fixture can be replayed.
 
 ## Evidence target
 
-Weather/road/vehicle integration edges are exercised in a permanent small game; final weather rendering is explicitly out of scope.
+Braking and cornering observations can support or falsify the scalar-friction model; weather/road/vehicle integration edges are exercised in a permanent replayable small game.
 
 ## Scope rule
 
-Do not introduce adjacent capabilities merely because the long-term architecture may eventually need them.
+Final weather rendering, production vehicle assets and final driving balance are explicitly out of scope.
