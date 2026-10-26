@@ -25,7 +25,24 @@ The roadmap intentionally stops before a full city-block vertical slice.
 | 2 | INT-008..011 | browser and interactive physical-system experiments |
 | 3 | INT-012..013 | world breadth + first major composition |
 
-## Intents
+## Evidence baseline
+
+Inspected on 26 October 2026 against merged revision [`5ba45f8`](https://github.com/sb-dev/worldstack/commit/5ba45f8117d09f87a84bb0e42e61c6f7d4cc310a). This is a source/evidence snapshot, not accepted Pactwright Delivery history. [PR #1's CI](https://github.com/sb-dev/worldstack/actions/runs/34144647721) passed the frozen-lockfile install and verification pipeline for its head revision; that evidence covers repository checks only.
+
+| Intents | Observed baseline and remaining evidence | Owning specifications |
+|---|---|---|
+| INT-001 | Workspace, lockfile and CI exist. A usable pinned Pactwright Core and its generated workspace still need verification; see the [workspace boundary](../../.pactwright/README.md). | [06 — bootstrap adoption](../specs/06-repository-and-development-process.md#adopting-pre-pactwright-bootstrap-work), [05 — external dependencies](../specs/05-production-skills-and-pactwright-integration.md#external-dependency-boundary) |
+| INT-002 | Founding research exists. Compatible Project Intelligence installation and accepted knowledge are not evidenced in this repository. | [05 — knowledge ownership](../specs/05-production-skills-and-pactwright-integration.md#reusable-versus-project-specific-knowledge) |
+| INT-003 | The [capability map](production-skills-capability-map.md) records inspected sources and gaps. Skill selection, installation and Worldstack integration remain unverified. | [05 — required families](../specs/05-production-skills-and-pactwright-integration.md#required-skill-families) |
+| INT-004–006 | Candidate [world model](../../packages/world-model/src/index.ts), [experiment identity](../../packages/experiment-model/src/index.ts) and [seeded helper](../../packages/test-harness/src/index.ts) exist. Unrelated consumers, provenance review and replay evidence remain required. | [02 — model contracts](../specs/02-world-model-and-system-integration.md), [03 — experiments](../specs/03-experimentation-evidence-and-emergence.md) |
+| INT-007–009 | Cross-system fixtures and rendering/physics comparisons remain planned. No provider is selected by this roadmap. | [02 — integration](../specs/02-world-model-and-system-integration.md#cross-system-integration), [03 — determinism](../specs/03-experimentation-evidence-and-emergence.md#determinism) |
+| INT-010–013 | The [labs directory](../../apps/labs/README.md) reserves the intended games; implementations and regression evidence remain planned. | [03 — interactive experiments](../specs/03-experimentation-evidence-and-emergence.md#interactive-experiments), [04 — permanent fixtures](../specs/04-game-world-and-representation.md#development-ladder) |
+
+The [bootstrap Intent files](../../specs/graph/README.md) own detailed acceptance targets. Before executing an experiment, its Contract/Brief must name the workload, runtime conditions, observations, pass criteria and evidence location. Define performance budgets from the selected target environment; this roadmap does not invent universal thresholds.
+
+Keep observations and replay/regression results with the authorised Delivery evidence. Once Pactwright is initialised, derive progress from its canonical records under the [roadmap authority rule](README.md). A source inspection or passing package test does not close an Intent.
+
+## Intent summaries
 
 ### INT-001 - Bootstrap Worldstack
 
@@ -81,7 +98,7 @@ Provide minimal experiment identity, parameters, model revisions, seed, runtime 
 
 **Bootstrap status:** candidate implementation already exists in `@worldstack/experiment-model`. This Intent remains open until an interactive experiment can be replayed from pinned identity.
 
-**Evidence target:** An experiment definition can be reconstructed and rerun without an experiment platform; an interactive fixture can replay a recorded input trace against the same seed, model revisions and runtime identity.
+**Evidence target:** A small recorded-input fixture proves reconstruction and replay against pinned identity without depending on Storm Run or a browser host. See [INT-006](../../specs/graph/intents/int-006-reproducible-experiment-harness.md#evidence-target).
 
 ### INT-007 - Cross-System Event PoC
 
@@ -127,7 +144,7 @@ Test roads, lanes, junctions, navigation, traffic, vehicle behaviour, collision 
 
 **Dependencies:** INT-008, INT-009.
 
-**Evidence target:** Traffic/vehicle/navigation interactions remain stable across several connected primitive streets.
+**Evidence target:** A repeatable route and workload prove traffic/vehicle/navigation stability against declared criteria and remain a regression fixture. See [INT-011](../../specs/graph/intents/int-011-street-racer.md#evidence-target).
 
 ### INT-012 - City Flyover
 
@@ -135,7 +152,7 @@ Represent a much larger cheap city footprint and prove coordinates, partitioning
 
 **Dependencies:** INT-004, INT-008.
 
-**Evidence target:** Map-derived geography can exceed production-fidelity scope while remaining traversable and streamable.
+**Evidence target:** A repeatable traversal proves visibility, streaming and memory recovery within declared budgets, with map-source provenance retained. See [INT-012](../../specs/graph/intents/int-012-city-flyover.md#evidence-target).
 
 ### INT-013 - Pursuit Integration Game
 
@@ -143,7 +160,7 @@ Combine validated world, streaming, weather, navigation, traffic, vehicles and p
 
 **Dependencies:** INT-010, INT-011, INT-012.
 
-**Evidence target:** A four-block pursuit survives crime→police, weather→vehicle and streaming-boundary chains without production-quality assets.
+**Evidence target:** Repeatable four-block scenarios prove crime→police, weather→vehicle and streaming-boundary chains; affected earlier fixtures still pass. See [INT-013](../../specs/graph/intents/int-013-pursuit-integration-game.md#evidence-target).
 
 ## Completion gate
 

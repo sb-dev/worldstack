@@ -22,6 +22,8 @@ Keep runtime identity generic and represent recorded interactive input by an imm
 
 An experiment definition can be reconstructed and rerun without an experiment platform; an interactive fixture can replay the same trace against the same seed, model revisions and runtime identity.
 
+Use a small fixture with recorded input events to prove this gate independently of Storm Run and rendering/physics provider selection. Retain the trace, its content hash, pinned experiment identity, expected observations and replay result. Declare the comparison rule before the run, including any justified tolerance. This proves the fixture's replay boundary, not later browser or solver determinism.
+
 ## Scope rule
 
 Do not build a general experiment platform, trace recorder or orchestration service until a concrete lab requires it.
