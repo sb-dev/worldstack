@@ -1,4 +1,4 @@
-# INT-008 — Rendering Host Evaluation
+# INT-008 - Rendering Host Evaluation
 
 ## Intent
 
@@ -11,12 +11,12 @@ Compare browser rendering hosts with equivalent world data and workload, selecti
 
 ## Contract focus
 
-The canonical Contract for this Intent should authorise the smallest implementation capable of resolving the uncertainty or producing the stated programme outcome. Domain-specific implementation details belong in the Brief and relevant Production Skills.
+Evaluate equivalent scenes using the same world data, assets, camera and workload. Include browser performance, world-data fit, streaming fit, tooling, replaceability, runtime identity and separation of simulation timing from render timing.
 
 ## Evidence target
 
-A current browser host decision is supported by executable comparative Evidence.
+A current browser host decision is supported by executable comparative Evidence and does not make renderer timing authoritative simulation state.
 
 ## Scope rule
 
-Do not introduce adjacent capabilities merely because the long-term architecture may eventually need them.
+Do not turn the selected rendering host into the canonical world, simulation or gameplay data model.

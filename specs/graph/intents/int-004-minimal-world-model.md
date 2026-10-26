@@ -1,4 +1,4 @@
-# INT-004 — Minimal World Model
+# INT-004 - Minimal World Model
 
 ## Intent
 
@@ -9,14 +9,20 @@ Create the smallest engine-neutral model vocabulary required by the first experi
 - INT-001
 - INT-002
 
+## Bootstrap status
+
+A candidate implementation already exists in `@worldstack/world-model`.
+
+This Intent does not retroactively authorise that bootstrap code. It remains open until downstream use validates the candidate contract or forces revision.
+
 ## Contract focus
 
-The canonical Contract for this Intent should authorise the smallest implementation capable of resolving the uncertainty or producing the stated programme outcome. Domain-specific implementation details belong in the Brief and relevant Production Skills.
+Validate the existing minimum before extending it: phenomenon, revision, fidelity, behavioural inputs/outputs, assumptions, Evidence references and limitations.
 
 ## Evidence target
 
-At least two unrelated PoCs can use the model contract without changing its basic semantics.
+At least two unrelated Roadmap 01 consumers can use the model contract without changing its basic semantics.
 
 ## Scope rule
 
-Do not introduce adjacent capabilities merely because the long-term architecture may eventually need them.
+Do not introduce a universal state/event schema or richer port typing until repeated integrations require it.

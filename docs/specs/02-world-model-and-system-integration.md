@@ -18,6 +18,22 @@ A model is an executable approximation of a phenomenon. A serious model should i
 
 The bootstrap `@worldstack/world-model` package deliberately implements only this minimum.
 
+Inputs and outputs are behavioural ports, not a universal data schema. The bootstrap contract identifies each port by an id and description. Add richer typing, units or ranges only when real integrations require them.
+
+## Provenance
+
+Assumptions must identify the Evidence references that support them where support exists. An empty evidence list is valid when an assumption is explicit but currently unsupported.
+
+This creates the minimum inspectable chain:
+
+```text
+Evidence
+→ Assumption
+→ Model behaviour
+```
+
+The bootstrap does not introduce claim nodes, confidence scoring or a separate provenance graph.
+
 ## Fidelity
 
 - L0: heuristic.
@@ -41,6 +57,14 @@ rainfall model
 ```
 
 Only repeated experiments may justify extracting a generic Event Graph.
+
+## Initial time model
+
+Bootstrap `WorldEvent` records one monotonically increasing logical experiment tick for deterministic ordering.
+
+Subsystems may execute at different cadences relative to that clock. Physics may advance every tick while weather, traffic or economics advance less frequently.
+
+Independent subsystem clocks, calendar-time semantics and continuous-time integration remain outside the bootstrap contract until an experiment proves they are required.
 
 ## Model replacement
 

@@ -12,6 +12,14 @@ At every proposed addition ask:
 
 If yes, create the smallest adequate implementation. If no, leave it conceptual.
 
+## Adopting pre-Pactwright bootstrap work
+
+Bootstrap code may exist before the selected Pactwright runtime is installed. Seed Intents may adopt that code as a candidate implementation, but they do not retroactively authorise the earlier work.
+
+Such an Intent remains open until its Contract, Brief, Review and Evidence validate the existing implementation or replace it.
+
+This preserves history while preventing "already coded" from being treated as "already proven".
+
 ## Fundamental development unit
 
 The development unit is a question or hypothesis followed by the smallest implementation capable of producing useful evidence.

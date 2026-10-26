@@ -1,21 +1,25 @@
-# INT-005 — Model Provenance Contract
+# INT-005 - Model Provenance Contract
 
 ## Intent
 
-Make phenomenon, evidence, assumptions, limitations, fidelity and revision inspectable for executable models.
+Make phenomenon, evidence, assumption-to-evidence links, limitations, fidelity and revision inspectable for executable models.
 
 ## Dependencies
 
 - INT-004
 
+## Bootstrap status
+
+Candidate provenance fields already exist. This Intent remains open until downstream experiments demonstrate that the links are sufficient for review.
+
 ## Contract focus
 
-The canonical Contract for this Intent should authorise the smallest implementation capable of resolving the uncertainty or producing the stated programme outcome. Domain-specific implementation details belong in the Brief and relevant Production Skills.
+Add the smallest explicit relationship needed to trace each model assumption to supporting Evidence while allowing unsupported assumptions to remain visible.
 
 ## Evidence target
 
-A reviewer can reconstruct why a model behaves as designed and what it does not claim.
+A reviewer can reconstruct why a model behaves as designed, which Evidence supports each assumption, and what the model does not claim.
 
 ## Scope rule
 
-Do not introduce adjacent capabilities merely because the long-term architecture may eventually need them.
+Do not introduce confidence scores, claim graphs or a general provenance engine without repeated need.

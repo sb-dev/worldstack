@@ -13,9 +13,37 @@ A reproducible experiment should identify:
 - parameters;
 - random seed where relevant;
 - runtime/environment identity where behaviour depends on it;
+- recorded input trace where human or agent input affects the run;
 - observations.
 
-The bootstrap experiment model stores the first five domain concepts without creating an experiment platform.
+The bootstrap experiment model records model revisions, parameters, seed, runtime identity and an optional input-trace reference without creating an experiment platform.
+
+Runtime identity must remain generic. It may pin the Worldstack revision and component revisions such as renderer, physics provider, browser or experiment runtime without making those components part of the generic experiment vocabulary.
+
+## Interactive experiments
+
+A player-driven game becomes a replayable experiment only when the inputs that affect the observation can be reproduced.
+
+The minimum identity for an interactive fixture is:
+
+```text
+model revisions
++ parameters
++ seed
++ runtime revisions
++ recorded input trace
+→ replayable run
+```
+
+Labs may still be useful prototypes without a trace, but they must not claim reproducibility until the relevant inputs are captured.
+
+## Determinism
+
+Provider selection must explicitly evaluate the determinism required by the experiment.
+
+For simulation components this may include fixed-step behaviour, deterministic initialisation, replay on the same runtime, cross-platform determinism, snapshot/restore, state hashing and known sources of nondeterminism outside the solver.
+
+Rendering must not become the authoritative simulation clock. Exact pixel reproduction is not a default experiment requirement.
 
 ## Research modes
 

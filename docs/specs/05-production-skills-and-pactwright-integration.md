@@ -17,6 +17,14 @@ Production Skills remain independently installable and own their workflows, arte
 
 Pactwright owns Contract fulfilment, lifecycle authority and Evidence. Project Intelligence owns Worldstack-specific durable conclusions.
 
+## External dependency boundary
+
+Worldstack must pin the exact usable Pactwright Core, Project Intelligence extension and Production Skills revisions selected for a Delivery. Their schemas must not be guessed or recreated locally when an external implementation is unavailable.
+
+Pactwright Core and Project Intelligence are separate availability gates. A usable Core revision does not imply that the compatible Project Intelligence extension is available.
+
+The Production Skills capability baseline may inspect the actual skill repositories directly. A central Production Skills catalogue or incubator is not a prerequisite for Roadmap 01.
+
 ## Required skill families
 
 Worldstack's target family includes game development, software engineering, deep research, UI/UX, world/environment production, 3D, character, animation, narrative, video/cinematography, music, sound and QA/evaluation.

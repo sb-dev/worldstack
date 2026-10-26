@@ -1,4 +1,4 @@
-# INT-002 — Bootstrap Project Intelligence
+# INT-002 - Bootstrap Project Intelligence
 
 ## Intent
 
@@ -8,9 +8,15 @@ Turn founding research and architecture decisions into compact accepted project 
 
 - INT-001
 
+## External gate
+
+Blocked until an exact Project Intelligence extension revision compatible with the selected Pactwright Core is verified as usable.
+
+Do not create a Worldstack-local Project Intelligence schema to bypass this dependency.
+
 ## Contract focus
 
-The canonical Contract for this Intent should authorise the smallest implementation capable of resolving the uncertainty or producing the stated programme outcome. Domain-specific implementation details belong in the Brief and relevant Production Skills.
+Once the external dependency is available, authorise only the smallest ingestion and accepted-knowledge baseline needed by Roadmap 01.
 
 ## Evidence target
 
@@ -18,4 +24,4 @@ Later Briefs can consume accepted conclusions without loading the full research 
 
 ## Scope rule
 
-Do not introduce adjacent capabilities merely because the long-term architecture may eventually need them.
+Project Intelligence stores Worldstack-specific durable conclusions; it does not absorb reusable Production Skills expertise.
